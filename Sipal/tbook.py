@@ -83,8 +83,21 @@ def Emociones():
                     win = GraphWin('Page 1',500,500)
                     win.setCoords( -100, -100, 100, 100)
 
-                    hungry = Image(Point(0,10),"hambre.ppm")
+                    hungry = Image(Point(0,18),"hambrep.ppm")
                     hungry.draw(win)
+
+                    brect= Rectangle(Point(-100,-50), Point(100,-100))
+                    brect.setFill("white")
+                    brect.draw(win)
+
+                    hambre=Text(Point(0,-60),"Tengo hambre")
+                    hambre.setSize(30)
+                    hambre.setStyle("bold")
+                    hambre.setTextColor("black")
+                    hambre.draw(win)
+
+                    userin = Entry(Point(0,-80),10)
+                    userin.draw(win)
 
                     next=Button(win,75,-80,-20,-10,"cornsilk","Next")
                     next.activate()
