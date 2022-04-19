@@ -46,7 +46,11 @@ def Emociones():
             win.close()
             break
 
+<<<<<<< HEAD
         elif p and book1.clicked(p):
+=======
+        if p and book1.clicked(p):
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
             #emociones book home page window
             win.close()
             win = GraphWin('Emociones',500,500)
@@ -80,7 +84,11 @@ def Emociones():
             Emociones.setTextColor("white")
             Emociones.draw(win)
 
+<<<<<<< HEAD
         if p and audibut.clicked(p):
+=======
+        elif p and audi.clicked(p):
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
             wav_file = AudioSegment.from_file(file = "Sipal/Level1.wav",format = "wav")
             play(wav_file)
 
@@ -93,7 +101,11 @@ def Emociones():
                     win = GraphWin('Page 1',500,500)
                     win.setCoords( -100, -100, 100, 100)
 
+<<<<<<< HEAD
                     hungry = Image(Point(0,18),"Sipal/hambrep.ppm")
+=======
+                    hungry = Image(Point(0,18),"hambrep.ppm")
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
                     hungry.draw(win)
 
                     brect= Rectangle(Point(-100,-50), Point(100,-100))
@@ -122,10 +134,15 @@ def Emociones():
                     aline = Line(Point(-100,-50),Point(100,-50))
                     aline.setWidth(6)
                     aline.draw(win)
+<<<<<<< HEAD
                     
                 if r and audibut.clicked(r):
                     wav_file = AudioSegment.from_file(file = "Sipal/hambre.wav",format = "wav")
                     play(wav_file)
+=======
+                # elif r and enterbut.clicked(r):
+                #     txt = userin.getText()
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
  
                     while True:
                         #second page of the emociones book
@@ -135,7 +152,11 @@ def Emociones():
                             win = GraphWin('Page 2',500,500)
                             win.setCoords( -100, -100, 100, 100)
 
+<<<<<<< HEAD
                             sad = Image(Point(0,18),"Sipal/tristeg.ppm")
+=======
+                            sad = Image(Point(0,18),"tristeg.ppm")
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
                             sad.draw(win)
 
                             crect= Rectangle(Point(-100,-50), Point(100,-100))
@@ -165,9 +186,12 @@ def Emociones():
                             bline = Line(Point(-100,-50),Point(100,-50))
                             bline.setWidth(6)
                             bline.draw(win)
+<<<<<<< HEAD
                         if a and audibut.clicked(a):
                             wav_file = AudioSegment.from_file(file = "Sipal/triste.wav",format = "wav")
                             play(wav_file)
+=======
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
 
                             while True:
                                 #third page of emociones book
@@ -178,7 +202,11 @@ def Emociones():
                                     win = GraphWin('Page 3',500,500)
                                     win.setCoords( -100, -100, 100, 100)
 
+<<<<<<< HEAD
                                     happy = Image(Point(0,30),"Sipal/felize.ppm")
+=======
+                                    happy = Image(Point(0,30),"felize.ppm")
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
                                     happy.draw(win)
 
                                     drect= Rectangle(Point(-100,-50), Point(100,-100))
@@ -208,10 +236,13 @@ def Emociones():
                                     cline = Line(Point(-100,-50),Point(100,-50))
                                     cline.setWidth(6)
                                     cline.draw(win)
+<<<<<<< HEAD
 
                                 if b and audibut.clicked(b):
                                     wav_file = AudioSegment.from_file(file = "Sipal/feliz.wav",format = "wav")
                                     play(wav_file)
+=======
+>>>>>>> d06d4ca517fdeca3b9dfcee4953051176ca86617
                                 
         
         # if p and book2.clicked(p):
