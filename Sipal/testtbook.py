@@ -14,7 +14,7 @@ def Emociones():
 
     win = GraphWin('Sipal Home Page',500,500)
     win.setCoords( -100, -100, 100, 100 )
-    nopal= Image(Point(0,0),"Sipal/convnopal.ppm")
+    nopal= Image(Point(0,0),"convnopal.ppm")
     nopal.draw(win)
     #quit button 
     quitbut=Button(win,80,-80,-25,-20,"cornsilk","Quit")
@@ -43,7 +43,7 @@ def Emociones():
     message2.draw(win)
 
     while True:
-        if state ==0:
+        if state == 0:
 
             p  = win.checkMouse( )
             if p and quitbut.clicked(p):
@@ -59,7 +59,7 @@ def Emociones():
                 win1 = GraphWin('Emociones',500,500)
                 win1.setCoords( -100, -100, 100, 100 )
 
-                emociones = Image(Point(0,0),"Sipal/emocciones.ppm")
+                emociones = Image(Point(0,0),"emocciones.ppm")
                 emociones.draw(win1)
 
                 next0=Button(win1,75,-80,-20,-10,"cornsilk","Next")
@@ -91,7 +91,7 @@ def Emociones():
 
             if p and audibut.clicked(p):
 
-                wav_file = AudioSegment.from_file(file = "Sipal/Level1.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "Level1.wav",format = "wav")
                 play(wav_file)
     
         if state == 11 :
@@ -102,135 +102,137 @@ def Emociones():
                 quitbut.deactivate()
                 print('second page')
                 win1.close()
-                win = GraphWin('Page 1',500,500)
-                win.setCoords( -100, -100, 100, 100)
+                win2 = GraphWin('Page 1',500,500)
+                win2.setCoords( -100, -100, 100, 100)
+#if clicked if state is 11 action then check##################only one while loop checking for clicks
 
+                hungry = Image(Point(0,18),"hambrep.ppm")
 
-                hungry = Image(Point(0,18),"Sipal/hambrep.ppm")
-
-                hungry.draw(win)
+                hungry.draw(win2)
 
                 brect= Rectangle(Point(-100,-50), Point(100,-100))
                 brect.setFill("white")
-                brect.draw(win)
+                brect.draw(win2)
 
                 hambre=Text(Point(0,-60),"Tengo hambre")
                 hambre.setSize(30)
                 hambre.setStyle("bold")
                 hambre.setTextColor("black")
-                hambre.draw(win)
+                hambre.draw(win2)
 
                 userin = Entry(Point(0,-80),10)
                 txt = userin.getText()
-                userin.draw(win)
+                userin.draw(win2)
 
-                enterbut = Button(win,-75,-80,-20,-10,"cornsilk","Enter")
+                enterbut = Button(win2,-75,-80,-20,-10,"cornsilk","Enter")
                 enterbut.activate()
 
-                next1=Button(win,75,-80,-20,-10,"cornsilk","Next")
+                next1=Button(win2,75,-80,-20,-10,"cornsilk","Next")
                 next1.activate()
 
-                audibut = Button(win, 75, -35, -20, -10, "cornsilk","Audio")
+                audibut = Button(win2, 75, -35, -20, -10, "cornsilk","Audio")
                 audibut.activate()
 
                 aline = Line(Point(-100,-50),Point(100,-50))
                 aline.setWidth(6)
-                aline.draw(win)
+                aline.draw(win2)
                         
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "Sipal/hambre.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "hambre.wav",format = "wav")
                 play(wav_file)
 
         
         if state == 12:
+            p  = win2.checkMouse( )
             if p and next1.clicked(p):
                 state = 13
                 quitbut.deactivate()
-                win.close()
-                win = GraphWin('Page 2',500,500)
-                win.setCoords( -100, -100, 100, 100)
+                win2.close()
+                win3 = GraphWin('Page 2',500,500)
+                win3.setCoords( -100, -100, 100, 100)
 
-                sad = Image(Point(0,18),"Sipal/tristeg.ppm")
+                sad = Image(Point(0,18),"tristeg.ppm")
 
-                sad.draw(win)
+                sad.draw(win3)
 
                 crect= Rectangle(Point(-100,-50), Point(100,-100))
                 crect.setFill("white")
-                crect.draw(win)
+                crect.draw(win3)
 
                 triste=Text(Point(0,-60),"Estoy triste")
                 triste.setSize(30)
                 triste.setStyle("bold")
                 triste.setTextColor("black")
-                triste.draw(win)
+                triste.draw(win3)
 
                 useri = Entry(Point(0,-80),10)
                 txt1 = useri.getText()
-                useri.draw(win)
+                useri.draw(win3)
 
-                enterbut = Button(win,-75,-80,-20,-10,"cornsilk","Enter")
+                enterbut = Button(win3,-75,-80,-20,-10,"cornsilk","Enter")
                 enterbut.activate()
 
-                next2=Button(win,75,-80,-20,-10,"cornsilk","Next")
+                next2=Button(win3,75,-80,-20,-10,"cornsilk","Next")
                 next2.activate()
 
 
-                audibut = Button(win, 75, -35, -20, -10, "cornsilk","Audio")
+                audibut = Button(win3, 75, -35, -20, -10, "cornsilk","Audio")
                 audibut.activate()
 
                 bline = Line(Point(-100,-50),Point(100,-50))
                 bline.setWidth(6)
-                bline.draw(win)
+                bline.draw(win3)
 
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "Sipal/triste.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "triste.wav",format = "wav")
                 play(wav_file)
 
         if state == 13:
+            p  = win3.checkMouse( )
             if p and next2.clicked(p):
                 state = 14
                 quitbut.deactivate()
-                win.close()
-                win = GraphWin('Page 3',500,500)
-                win.setCoords( -100, -100, 100, 100)
+                win3.close()
+                win4 = GraphWin('Page 3',500,500)
+                win4.setCoords( -100, -100, 100, 100)
 
 
-                happy = Image(Point(0,30),"Sipal/felize.ppm")
+                happy = Image(Point(0,30),"felize.ppm")
 
 
-                happy.draw(win)
+                happy.draw(win4)
 
                 drect= Rectangle(Point(-100,-50), Point(100,-100))
                 drect.setFill("white")
-                drect.draw(win)
+                drect.draw(win4)
                 
                 feliz=Text(Point(0,-60),"Estoy feliz")
                 feliz.setSize(30)
                 feliz.setStyle("bold")
                 feliz.setTextColor("black")
-                feliz.draw(win)
+                feliz.draw(win4)
 
                 user = Entry(Point(0,-80),10)
                 txt2 = user.getText()
-                user.draw(win)
+                user.draw(win4)
 
-                enterbut = Button(win,-75,-80,-20,-10,"cornsilk","Enter")
+                enterbut = Button(win4,-75,-80,-20,-10,"cornsilk","Enter")
                 enterbut.activate()
 
-                next3=Button(win,75,-80,-20,-10,"cornsilk","Next")
+                next3=Button(win4,75,-80,-20,-10,"cornsilk","Next")
                 next3.activate()
 
 
-                audibut = Button(win, 75, -35, -20, -10, "cornsilk","Audio")
+                audibut = Button(win4, 75, -35, -20, -10, "cornsilk","Audio")
                 audibut.activate()
 
                 cline = Line(Point(-100,-50),Point(100,-50))
                 cline.setWidth(6)
-                cline.draw(win)
+                cline.draw(win4)
 
 
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "Sipal/feliz.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "feliz.wav",format = "wav")
                 play(wav_file)
 
                                 
