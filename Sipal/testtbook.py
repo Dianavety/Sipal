@@ -14,7 +14,7 @@ def Emociones():
 
     win = GraphWin('Sipal Home Page',500,500)
     win.setCoords( -100, -100, 100, 100 )
-    nopal= Image(Point(0,0),"convnopal.ppm")
+    nopal= Image(Point(0,0),"Sipal/convnopal.ppm")
     nopal.draw(win)
     #quit button 
     quitbut=Button(win,80,-80,-25,-20,"cornsilk","Quit")
@@ -59,7 +59,7 @@ def Emociones():
                 win1 = GraphWin('Emociones',500,500)
                 win1.setCoords( -100, -100, 100, 100 )
 
-                emociones = Image(Point(0,0),"emocciones.ppm")
+                emociones = Image(Point(0,0),"Sipal/emocciones.ppm")
                 emociones.draw(win1)
 
                 next0=Button(win1,75,-80,-20,-10,"cornsilk","Next")
@@ -91,7 +91,7 @@ def Emociones():
 
             if p and audibut.clicked(p):
 
-                wav_file = AudioSegment.from_file(file = "Level1.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "Sipal/Level1.wav",format = "wav")
                 play(wav_file)
     
         if state == 11 :
@@ -106,7 +106,7 @@ def Emociones():
                 win2.setCoords( -100, -100, 100, 100)
 #if clicked if state is 11 action then check##################only one while loop checking for clicks
 
-                hungry = Image(Point(0,18),"hambrep.ppm")
+                hungry = Image(Point(0,18),"Sipal/hambrep.ppm")
 
                 hungry.draw(win2)
 
@@ -138,7 +138,7 @@ def Emociones():
                 aline.draw(win2)
                         
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "hambre.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "Sipal/hambre.wav",format = "wav")
                 play(wav_file)
 
         
@@ -151,7 +151,7 @@ def Emociones():
                 win3 = GraphWin('Page 2',500,500)
                 win3.setCoords( -100, -100, 100, 100)
 
-                sad = Image(Point(0,18),"tristeg.ppm")
+                sad = Image(Point(0,18),"Sipal/tristeg.ppm")
 
                 sad.draw(win3)
 
@@ -184,7 +184,7 @@ def Emociones():
                 bline.draw(win3)
 
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "triste.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "Sipal/triste.wav",format = "wav")
                 play(wav_file)
 
         if state == 13:
@@ -197,7 +197,7 @@ def Emociones():
                 win4.setCoords( -100, -100, 100, 100)
 
 
-                happy = Image(Point(0,30),"felize.ppm")
+                happy = Image(Point(0,30),"Sipal/felize.ppm")
 
 
                 happy.draw(win4)
@@ -232,7 +232,7 @@ def Emociones():
 
 
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "feliz.wav",format = "wav")
+                wav_file = AudioSegment.from_file(file = "Sipal/feliz.wav",format = "wav")
                 play(wav_file)
 
                                 
