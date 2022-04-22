@@ -89,10 +89,7 @@ def Emociones():
                 Emociones.setTextColor("white")
                 Emociones.draw(win1)
 
-            if p and audibut.clicked(p):
 
-                wav_file = AudioSegment.from_file(file = "Sipal/Level1.wav",format = "wav")
-                play(wav_file)
     
         if state == 11 :
             p  = win1.checkMouse( )        
@@ -104,7 +101,7 @@ def Emociones():
                 win1.close()
                 win2 = GraphWin('Page 1',500,500)
                 win2.setCoords( -100, -100, 100, 100)
-#if clicked if state is 11 action then check##################only one while loop checking for clicks
+
 
                 hungry = Image(Point(0,18),"Sipal/hambrep.ppm")
 
@@ -136,10 +133,12 @@ def Emociones():
                 aline = Line(Point(-100,-50),Point(100,-50))
                 aline.setWidth(6)
                 aline.draw(win2)
-                        
+
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "Sipal/hambre.wav",format = "wav")
+                print(state)
+                wav_file = AudioSegment.from_file(file = "Sipal/Level1.wav",format = "wav")
                 play(wav_file)
+              
 
         
         if state == 12:
@@ -184,8 +183,10 @@ def Emociones():
                 bline.draw(win3)
 
             if p and audibut.clicked(p):
-                wav_file = AudioSegment.from_file(file = "Sipal/triste.wav",format = "wav")
+                print(state)
+                wav_file = AudioSegment.from_file(file = "Sipal/hambre.wav",format = "wav")
                 play(wav_file)
+
 
         if state == 13:
             p  = win3.checkMouse( )
@@ -230,8 +231,15 @@ def Emociones():
                 cline.setWidth(6)
                 cline.draw(win4)
 
-
             if p and audibut.clicked(p):
+    
+                wav_file = AudioSegment.from_file(file = "Sipal/triste.wav",format = "wav")
+                play(wav_file)
+
+        if state == 14:
+            p  = win4.checkMouse( )
+            if p and audibut.clicked(p):
+   
                 wav_file = AudioSegment.from_file(file = "Sipal/feliz.wav",format = "wav")
                 play(wav_file)
 
