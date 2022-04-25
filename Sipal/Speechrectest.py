@@ -1,7 +1,7 @@
 
 import time
 import speech_recognition as sr
-
+#addapted from https://discord.com/channels/@me/939320547538534431/968018717055262720
 
 
 def recognize_speech_from_mic(recognizer, microphone):
