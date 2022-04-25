@@ -1,6 +1,8 @@
 # Sipal
 CSC 151 final project (Ashley Luna y Diana Diaz)
+
 1. Summary
+
 Sipal is able to allow the user to follow through pages, each with a phrase, an image to aid in the understanding of the phrase and an audio button so that the user can understand how to say the phrase. After the user is able to play with the audio and is able to understand how to say the phrase, they can hit the enter button which will then prompt them to say the phrase. The user will have 2 tries in which our program will recognize if the user has said the phrase correctly or not. If the user has said the phrase correctly within one of the tries, the program will recognize it as correct. 
 
 2. Instructions for Use
